@@ -17,4 +17,9 @@
     <string name="hard">Складний</string>
     <string name="question_mark">?</string>
     <string name="progress_answers">Правильних відповідей %s (мінімум %s)</string>
+    <string name="try_again">Спробувати знову</string>
+    <string name="game_over">Game Over</string>
+    <string name="necessary_right_answer">Необхідна кількість правильних відповідей: %s</string>
+    <string name="your_score">Ваш рахунок: %s</string>
+    <string name="percentage_right_answers">Процент правильних відповідей: %s</string>
 </resources>

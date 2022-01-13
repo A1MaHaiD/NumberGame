@@ -1,22 +1,22 @@
-package com.handroid.numbergame.presentation.fragments
+package com.handroid.numbergame.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.handroid.numbergame.databinding.FragmentWelcomeBinding
+import com.handroid.numbergame.databinding.FragmentGameFinishedBinding
 
-class WelcomeFragment : Fragment() {
+class GameFinishedFragment : Fragment() {
 
-    private lateinit var binding: FragmentWelcomeBinding
+    private lateinit var binding: FragmentGameFinishedBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentWelcomeBinding.inflate(layoutInflater, container, false)
+        binding = FragmentGameFinishedBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 }

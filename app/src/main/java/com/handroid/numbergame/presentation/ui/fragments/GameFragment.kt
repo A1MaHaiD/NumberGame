@@ -1,4 +1,4 @@
-package com.handroid.numbergame.presentation.fragments
+package com.handroid.numbergame.presentation.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

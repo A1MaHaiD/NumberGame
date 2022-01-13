@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".presentation.fragments.ChooseLevelFragment">
+    tools:context=".presentation.ui.fragments.ChooseLevelFragment">
 
     <TextView
         android:id="@+id/tv_title"

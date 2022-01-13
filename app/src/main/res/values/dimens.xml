@@ -10,4 +10,6 @@
     <dimen name="font_normal_24">24sp</dimen>
     <dimen name="font_large_36">36sp</dimen>
     <dimen name="font_large_48">48sp</dimen>
+    <dimen name="spacing_large_48">48dp</dimen>
+    <dimen name="font_result_field_18">18sp</dimen>
 </resources>

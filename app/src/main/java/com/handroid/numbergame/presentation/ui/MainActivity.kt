@@ -1,4 +1,4 @@
-package com.handroid.numbergame.presentation
+package com.handroid.numbergame.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
