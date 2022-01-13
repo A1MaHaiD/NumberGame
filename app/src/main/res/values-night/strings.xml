@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NumberGame</string>
     <string name="welcome_logo">Welcome logo</string>
     <string name="number_composite">Склад числа</string>
     <string name="understandably">Зрозуміло</string>
@@ -15,7 +15,7 @@
     <string name="easy">Легкий</string>
     <string name="normal">Середній</string>
     <string name="hard">Складний</string>
-    <string name="question_mark">\?</string>
+    <string name="question_mark">?</string>
     <string name="progress_answers">Правильних відповідей %s (мінімум %s)</string>
     <string name="try_again">Спробувати знову</string>
     <string name="game_over">Game Over</string>
