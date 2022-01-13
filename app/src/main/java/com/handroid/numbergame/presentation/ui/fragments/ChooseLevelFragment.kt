@@ -9,14 +9,21 @@ import com.handroid.numbergame.databinding.FragmentChooseLevelBinding
 
 class ChooseLevelFragment : Fragment() {
 
-    private lateinit var binding: FragmentChooseLevelBinding
+    private var _binding: FragmentChooseLevelBinding? = null
+    private val binding: FragmentChooseLevelBinding
+        get() = _binding ?: throw RuntimeException("FragmentChooseLevelBinding == null")
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentChooseLevelBinding.inflate(layoutInflater, container, false)
+    ): View {
+        _binding = FragmentChooseLevelBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

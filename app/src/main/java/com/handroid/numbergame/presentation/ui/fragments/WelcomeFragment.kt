@@ -9,14 +9,28 @@ import com.handroid.numbergame.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentWelcomeBinding
+    private var _binding: FragmentWelcomeBinding? = null
+    private val binding: FragmentWelcomeBinding
+        get() = _binding ?: throw RuntimeException("FragmentWelcomeBinding == null")
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentWelcomeBinding.inflate(layoutInflater, container, false)
+    ): View {
+        _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnUnderstandably.setOnClickListener {
+
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
