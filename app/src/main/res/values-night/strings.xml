@@ -15,7 +15,7 @@
     <string name="easy">Легкий</string>
     <string name="normal">Середній</string>
     <string name="hard">Складний</string>
-    <string name="question_mark">?</string>
+    <string name="question_mark">\?</string>
     <string name="progress_answers">Правильних відповідей %s (мінімум %s)</string>
     <string name="try_again">Спробувати знову</string>
     <string name="game_over">Game Over</string>

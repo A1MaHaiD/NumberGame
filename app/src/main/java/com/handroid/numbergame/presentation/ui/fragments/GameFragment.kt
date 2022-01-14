@@ -1,6 +1,8 @@
 package com.handroid.numbergame.presentation.ui.fragments
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.handroid.numbergame.R
 import com.handroid.numbergame.databinding.FragmentGameBinding
 import com.handroid.numbergame.domain.entity.GameResult
-import com.handroid.numbergame.domain.entity.GameSetting
+import com.handroid.numbergame.domain.entity.GameSettings
 import com.handroid.numbergame.domain.entity.Level
 
 class GameFragment : Fragment() {
@@ -35,7 +37,33 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        timerChangeListener()
         resultGame()
+    }
+
+    private fun timerChangeListener(){
+        binding.tvTimer.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                TODO("Not yet implemented")
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                TODO("Not yet implemented")
+                binding.progressBar
+            }
+        })
+    }
+
+    private fun progressBarListener(){
+        with(binding.progressBar){
+            min = 0
+            TODO()
+        }
+
     }
 
     override fun onDestroyView() {
@@ -54,9 +82,9 @@ class GameFragment : Fragment() {
             launchGameFinishFragment(
                 GameResult(
                     true, 10, 10,
-                    GameSetting(
-                        0, 0,
-                        0, 0
+                    GameSettings(
+                        20, 20,
+                        80, 40
                     )
                 )
             )
