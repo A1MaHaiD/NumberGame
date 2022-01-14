@@ -4,4 +4,5 @@
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:name="com.handroid.numbergame.presentation.ui.fragments.WelcomeFragment"
     tools:context=".presentation.ui.MainActivity" />
