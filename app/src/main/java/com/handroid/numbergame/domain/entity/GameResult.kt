@@ -1,8 +1,12 @@
 package com.handroid.numbergame.domain.entity
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class GameResult(
-    val winner:Boolean = false,
+    val winner: Boolean = false,
     val countOfRightAnswers: Int,
-    val countOfQuestions:Int,
+    val countOfQuestions: Int,
     val gameSettings: GameSetting
-)
+) : Parcelable
