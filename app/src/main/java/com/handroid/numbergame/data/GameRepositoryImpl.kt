@@ -1,6 +1,6 @@
 package com.handroid.numbergame.data
 
-import com.handroid.numbergame.domain.entity.GameSetting
+import com.handroid.numbergame.domain.entity.GameSettings
 import com.handroid.numbergame.domain.entity.Level
 import com.handroid.numbergame.domain.entity.Question
 import com.handroid.numbergame.domain.repository.GameRepository
@@ -27,10 +27,10 @@ object GameRepositoryImpl : GameRepository {
         return Question(sum, visibleNumber, options.toList())
     }
 
-    override fun getGameSettings(level: Level): GameSetting {
+    override fun getGameSettings(level: Level): GameSettings {
         return when (level) {
             Level.TEST -> {
-                GameSetting(
+                GameSettings(
                     10,
                     3,
                     50,
@@ -38,7 +38,7 @@ object GameRepositoryImpl : GameRepository {
                 )
             }
             Level.EASY -> {
-                GameSetting(
+                GameSettings(
                     10,
                     10,
                     70,
@@ -46,7 +46,7 @@ object GameRepositoryImpl : GameRepository {
                 )
             }
             Level.NORMAL -> {
-                GameSetting(
+                GameSettings(
                     20,
                     20,
                     80,
@@ -54,7 +54,7 @@ object GameRepositoryImpl : GameRepository {
                 )
             }
             Level.HARD -> {
-                GameSetting(
+                GameSettings(
                     30,
                     30,
                     90,
