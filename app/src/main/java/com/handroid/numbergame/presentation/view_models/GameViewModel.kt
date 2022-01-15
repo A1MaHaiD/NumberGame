@@ -120,7 +120,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         val wholeSeconds = millisUntilFinished / MILLIS_IN_SECONDS
         val minutes = wholeSeconds / SECONDS_IN_MINUTE
         val leftSeconds = wholeSeconds - (minutes * SECONDS_IN_MINUTE)
-        return String().format("%02d:%02d", minutes, leftSeconds)
+        return String.format("%02d:%02d", minutes, leftSeconds)
     }
 
     private fun generateQuestion() {
