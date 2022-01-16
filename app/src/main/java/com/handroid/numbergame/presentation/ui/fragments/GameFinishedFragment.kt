@@ -43,23 +43,26 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun getGameResult() {
-        binding.ivEmojiResult.setImageResource(getSmileResId())
-        binding.tvRequiredAnswers.text = String.format(
-            getString(R.string.necessary_right_answer),
-            args.gameResult.gameSettings.minCount
-        )
-        binding.tvScoreAnswers.text = String.format(
-            getString(R.string.your_score),
-            args.gameResult.countOfRightAnswers
-        )
-        binding.tvRequiredPercentage.text = String.format(
-            getString(R.string.necessary_percent_right_answer),
-            args.gameResult.gameSettings.minPercent
-        )
-        binding.tvScorePercentage.text = String.format(
-            getString(R.string.percentage_right_answers),
-            getPercentOfRightAnswers()
-        )
+        binding.gameResult = args.gameResult
+        with(binding){
+            ivEmojiResult.setImageResource(getSmileResId())
+/*            tvRequiredAnswers.text = String.format(
+                getString(R.string.necessary_right_answer),
+                args.gameResult.gameSettings.minCount
+            )
+            tvScoreAnswers.text = String.format(
+                getString(R.string.your_score),
+                args.gameResult.countOfRightAnswers
+            )
+            tvRequiredPercentage.text = String.format(
+                getString(R.string.necessary_percent_right_answer),
+                args.gameResult.gameSettings.minPercent
+            )*/
+            tvScorePercentage.text = String.format(
+                getString(R.string.percentage_right_answers),
+                getPercentOfRightAnswers()
+            )
+        }
     }
 
     private fun getPercentOfRightAnswers() = with (args.gameResult) {
