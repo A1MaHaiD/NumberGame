@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.handroid.numbergame.R
 import com.handroid.numbergame.databinding.FragmentChooseLevelBinding
 import com.handroid.numbergame.domain.entity.Level
@@ -31,9 +30,10 @@ class ChooseLevelFragment : Fragment() {
     }
 
     private fun launchGameFragment(level: Level) {
-        findNavController().navigate(
-            ChooseLevelFragmentDirections.actionChooseLevelFragmentToGameFragment(level)
-        )
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.main_container, GameFragment.newInstance(level))
+            .addToBackStack(GameFragment.TAG)
+            .commit()
     }
 
     private fun chooseLevel() {
@@ -56,5 +56,13 @@ class ChooseLevelFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        const val TAG = "ChooseLevelFragment"
+
+        fun newInstance(): ChooseLevelFragment {
+            return ChooseLevelFragment()
+        }
     }
 }
