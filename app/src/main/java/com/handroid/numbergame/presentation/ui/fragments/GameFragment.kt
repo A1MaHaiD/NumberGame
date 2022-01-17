@@ -54,6 +54,8 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
         observeViewModel()
         setClickListenersToOptions()
     }
@@ -75,38 +77,10 @@ class GameFragment : Fragment() {
                     tvOptions[i].text = it.options[i].toString()
                 }
             }
-            percentOfRightAnswers.observe(viewLifecycleOwner) {
-                binding.progressBar.setProgress(it, true)
-            }
-            enoughCount.observe(viewLifecycleOwner) {
-                binding.tvAnswersProgress.setTextColor(getColorByState(it))
-            }
-            enoughPercent.observe(viewLifecycleOwner) {
-                val color = getColorByState(it)
-                binding.progressBar.progressTintList = ColorStateList.valueOf(color)
-            }
-            formattedTime.observe(viewLifecycleOwner) {
-                binding.tvTimer.text = it
-            }
-            minPercent.observe(viewLifecycleOwner) {
-                binding.progressBar.secondaryProgress = it
-            }
             gameResult.observe(viewLifecycleOwner) {
                 launchGameFinishFragment(it)
             }
-            progressAnswers.observe(viewLifecycleOwner) {
-                binding.tvAnswersProgress.text = it
-            }
         }
-    }
-
-    private fun getColorByState(goodState: Boolean): Int {
-        val colorResId = if (goodState) {
-            android.R.color.holo_green_light
-        } else {
-            android.R.color.holo_red_light
-        }
-        return ContextCompat.getColor(requireContext(), colorResId)
     }
 
     override fun onDestroyView() {
