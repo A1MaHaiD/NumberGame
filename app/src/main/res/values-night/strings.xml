@@ -22,5 +22,5 @@
     <string name="necessary_right_answer">Необхідна кількість правильних відповідей: %s</string>
     <string name="necessary_percent_right_answer">Необхідний процент правильних відповідей: %s</string>
     <string name="your_score">Ваш рахунок: %s</string>
-    <string name="percentage_right_answers">Процент правильних відповідей: %s</string>
+    <string name="percent_your_answers">Процент правильних відповідей: %s</string>
 </resources>

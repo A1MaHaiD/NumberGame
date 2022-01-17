@@ -4,14 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.handroid.numbergame.R
 import com.handroid.numbergame.databinding.FragmentGameFinishedBinding
-import com.handroid.numbergame.domain.entity.GameResult
 
 class GameFinishedFragment : Fragment() {
 
@@ -33,48 +29,12 @@ class GameFinishedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setClickListeners()
-        getGameResult()
+        binding.gameResult = args.gameResult
     }
 
     private fun setClickListeners() {
         binding.btnTryAgain.setOnClickListener {
             tryAgainGame()
-        }
-    }
-
-    private fun getGameResult() {
-        binding.ivEmojiResult.setImageResource(getSmileResId())
-        binding.tvRequiredAnswers.text = String.format(
-            getString(R.string.necessary_right_answer),
-            args.gameResult.gameSettings.minCount
-        )
-        binding.tvScoreAnswers.text = String.format(
-            getString(R.string.your_score),
-            args.gameResult.countOfRightAnswers
-        )
-        binding.tvRequiredPercentage.text = String.format(
-            getString(R.string.necessary_percent_right_answer),
-            args.gameResult.gameSettings.minPercent
-        )
-        binding.tvScorePercentage.text = String.format(
-            getString(R.string.percentage_right_answers),
-            getPercentOfRightAnswers()
-        )
-    }
-
-    private fun getPercentOfRightAnswers() = with (args.gameResult) {
-        if (countOfQuestions == 0) {
-            0
-        } else {
-            ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
-        }
-    }
-
-    private fun getSmileResId(): Int {
-        return if (args.gameResult.winner) {
-            R.drawable.ic_smile
-        } else {
-            R.drawable.ic_sad
         }
     }
 
