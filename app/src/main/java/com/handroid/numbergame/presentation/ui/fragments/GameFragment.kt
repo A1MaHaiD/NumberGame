@@ -11,10 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.handroid.numbergame.R
 import com.handroid.numbergame.databinding.FragmentGameBinding
 import com.handroid.numbergame.domain.entity.GameResult
-import com.handroid.numbergame.domain.entity.Level
 import com.handroid.numbergame.presentation.view_models.GameViewModel
 import com.handroid.numbergame.presentation.view_models.GameViewModelFactory
 
