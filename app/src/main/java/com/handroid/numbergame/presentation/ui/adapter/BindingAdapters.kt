@@ -72,6 +72,18 @@ fun bindEnoughPercent(progressBar: ProgressBar, enough: Boolean) {
     progressBar.progressTintList = ColorStateList.valueOf(color)
 }
 
+@BindingAdapter("numberAsText")
+fun bindNumberAsText(textView: TextView, number: Int) {
+    textView.text = number.toString()
+}
+
+@BindingAdapter("onOptionsClickListener")
+fun bindOnOptionsClickListener(textView: TextView, clickListener: OnOptionClickListener) {
+    textView.setOnClickListener {
+        clickListener.onOptionClick(textView.text.toString().toInt())
+    }
+}
+
 private fun getColorByState(context: Context, goodState: Boolean): Int {
     val colorResId = if (goodState) {
         android.R.color.holo_green_light
@@ -79,4 +91,9 @@ private fun getColorByState(context: Context, goodState: Boolean): Int {
         android.R.color.holo_red_light
     }
     return ContextCompat.getColor(context, colorResId)
+}
+
+interface OnOptionClickListener {
+
+    fun onOptionClick(option: Int)
 }
