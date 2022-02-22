@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.handroid.numbergame.R
 import com.handroid.numbergame.databinding.FragmentChooseLevelBinding
 import com.handroid.numbergame.domain.entity.Level
 
