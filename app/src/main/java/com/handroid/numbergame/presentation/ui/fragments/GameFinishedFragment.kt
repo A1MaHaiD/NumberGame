@@ -14,7 +14,6 @@ import com.handroid.numbergame.databinding.FragmentGameFinishedBinding
 import com.handroid.numbergame.domain.entity.GameResult
 
 class GameFinishedFragment : Fragment() {
-
     private val args by navArgs<GameFinishedFragmentArgs>()
 
     private var _binding: FragmentGameFinishedBinding? = null
