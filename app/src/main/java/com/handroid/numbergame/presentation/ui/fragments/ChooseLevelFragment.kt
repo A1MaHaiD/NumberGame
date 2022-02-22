@@ -11,6 +11,7 @@ import com.handroid.numbergame.databinding.FragmentChooseLevelBinding
 import com.handroid.numbergame.domain.entity.Level
 
 class ChooseLevelFragment : Fragment() {
+
     private var _binding: FragmentChooseLevelBinding? = null
     private val binding: FragmentChooseLevelBinding
         get() = _binding ?: throw RuntimeException("FragmentChooseLevelBinding == null")
