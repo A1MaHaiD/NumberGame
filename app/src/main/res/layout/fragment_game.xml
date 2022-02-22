@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_left_number"
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
         android:text="@string/progress_answers"/>
-    
+
     <ProgressBar
         android:id="@+id/progress_bar"
         style="?android:attr/progressBarStyleHorizontal"
