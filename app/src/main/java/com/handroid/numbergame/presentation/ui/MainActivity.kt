@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.handroid.numbergame.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
