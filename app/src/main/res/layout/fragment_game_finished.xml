@@ -36,8 +36,8 @@
         android:id="@+id/tv_score_answers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/your_score"
         android:layout_marginVertical="@dimen/spacing_small_8"
+        android:text="@string/your_score"
         android:textSize="@dimen/font_result_field_18"
         app:layout_constraintBottom_toTopOf="@id/tv_required_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
@@ -48,8 +48,8 @@
         android:id="@+id/tv_required_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/necessary_right_answer"
         android:layout_marginVertical="@dimen/spacing_small_8"
+        android:text="@string/necessary_right_answer"
         android:textSize="@dimen/font_result_field_18"
         app:layout_constraintBottom_toTopOf="@id/tv_score_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
@@ -61,8 +61,8 @@
         android:id="@+id/tv_score_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/percentage_right_answers"
         android:layout_marginVertical="@dimen/spacing_small_8"
+        android:text="@string/percentage_right_answers"
         android:textSize="@dimen/font_result_field_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answers"
@@ -77,3 +77,4 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
